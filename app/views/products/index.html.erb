@@ -1,0 +1,22 @@
+<h1>PRODUCTS INDEX PAGE</h1>
+
+
+
+<% cart.each do |product| %>
+    <%= product %>
+<% end %>
+
+<h3>ADD A PRODUCT</h3>
+
+<% ### i completely forgot about the form_tag syntax, can we go over it together for this example %>
+
+
+<%= form_tag ({controller: 'products', action: 'add', method: 'post'}) do %>
+    
+    <input name=product>
+    <input type=submit value='add to cart'>
+<% end %>
+
+
+
+
